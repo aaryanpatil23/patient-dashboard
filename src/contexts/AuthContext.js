@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
-const API_URL = 'https://opd-nexus-v2.onrender.com/';
+const API_URL = 'https://patient-dashboard-dphd.onrender.com/';
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
