@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OPD Nexus</title>
+    
+    <!-- 1. Load the Tailwind CDN Script FIRST --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Configure Tailwind for Dark Mode --><script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+
+    <!-- 3. Define ALL custom styles here --><style type="text/css">
+      /* Custom styles for the loader */
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .loader {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #4f46e5; /* Indigo color */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      /* --- THIS IS THE TRANSLUCENT CARD STYLE --- */
+      .card-glassmorphism {
+        /* Light Mode: White, 30% opaque */
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        
+        /* --- Neon border effect for Light Mode (Blue) --- */
+        border: 1px solid rgba(59, 130, 246, 0.3); /* blue-500 at 30% opacity */
+        box-shadow: 0 0 12px rgba(59, 130, 246, 0.15); /* subtle blue glow */
+      }
+      .dark .card-glassmorphism {
+        /* Dark Mode: Slate, 30% opaque */
+        background-color: rgba(30, 41, 59, 0.3); /* dark:bg-slate-800/30 */
+        
+        /* --- Neon border effect for Dark Mode (Pink) --- */
+        /* Using a pink-500 equivalent: rgb(236, 72, 153) */
+        border: 1px solid  rgba(59, 130, 246, 0.3); 
+        box-shadow: 0 0 12px rgba(59, 130, 246, 0.15); 
+      }
+    </style>
+  </head>
+
+  <!-- 4. Apply the new gradient background to the body -->
+  <body class="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200 dark:from-slate-950 dark:to-indigo-950">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+
