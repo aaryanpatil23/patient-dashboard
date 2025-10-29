@@ -2,7 +2,7 @@ import { jwtDecode } from 'jwt-decode';
 
 // --- THIS IS THE FIX ---
 // We add the 'export' keyword so other files can import this constant.
-export const API_URL = 'https://opd-patient-api.onrender.com'; // Use your Patient API URL
+export const API_URL = 'https://opd-nexus-v2.onrender.com/'; // Use your Patient API URL
 
 const getAuthToken = () => localStorage.getItem('appToken');
 
