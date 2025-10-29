@@ -12,7 +12,7 @@ import db_actions as db
 from auth import create_access_token, get_current_user_from_db, verify_password, get_password_hash
 
 app = FastAPI(title="OPD Nexus Patient API")
-origins = ["http://localhost:3000"]
+origins = ["Access-Control-Allow-Origin: https://patient-dashboard-navy-five.vercel.app"]
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 patient_router = APIRouter(prefix="/patient")
